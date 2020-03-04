@@ -7,6 +7,7 @@ import React,{
 } from 'react';
 
 import {
+   BrowserRouter as Router,
    Route,
    Switch,
    Redirect
@@ -17,9 +18,7 @@ import {
 */
 
 import Main from './components/main';
-import AboutUs from './components/Pages/AboutUs/aboutUs';
-import Carousel from './library/Carousel/carousel';
-
+import About from './components/Pages/About/about';
 /**
 * Styles
 */
@@ -42,10 +41,11 @@ export class App extends Component {
          <div className="app">
             <Switch>
                <Route 
-                  path="/crypto-cafe"
-                  component={ Main }
+                  exact 
+                  path={"/about"}
+                  component={About}
                />
-               <Redirect exact from="/" to="/crypto-cafe"/>
+               <Redirect exact from="/" to="/about"/>
             </Switch>
          </div>
       );

@@ -18,15 +18,12 @@ import {
 * Styles
 */
 
-import './locations.scss';
+import './about.scss';
 
 /**
 * Components
 */
 
-import LocationsInTheWorld from '../../Parts/LocationsInTheWorld/locationsInTheWorld';
-import Sidebar from '../../Parts/Sidebar/sidebar';
-import Footer from '../../Parts/Footer/footer';
 
 /**
 * Actions
@@ -44,6 +41,8 @@ import Footer from '../../Parts/Footer/footer';
 * Images
 */
 
+import Background from '../../../images/700_FO36064926_7b9fb5c531d9ef758ada11137a039fa4.jpg';
+
 /**
 * Utility
 */
@@ -54,6 +53,7 @@ import {
     H3,
     H4,
     H5,
+    EH0,
     EH1,
     EH2,
     EW1,
@@ -62,17 +62,16 @@ import {
 } from '../../UtilityComponents';
 
 /**
-* Locations component definition and export
+* AboutUs component definition and export
 */
 
-export const Locations = (props) => {
+export const About = (props) => {
 
     /**
     * Methods
     */
 
     useEffect(() => {
-        window.scrollTo(0, 0);
     }, []);
 
     /**
@@ -80,14 +79,9 @@ export const Locations = (props) => {
     */
 
     return(
-        <>
-           <div className="locations-wrapper">
-               {/* <Description/>
-               <Reservations/> */}
-               <LocationsInTheWorld/>
-               <Footer/>
-           </div>
-       </>
+        <div>
+
+        </div>
     );
 }
 
@@ -104,5 +98,5 @@ export default connect(
             // stopChangingFeedbacks: bindActionCreators(Actions.stopChangingFeedbacks, dispatch)
         };
     }
-)(Locations);
+)(About);
  

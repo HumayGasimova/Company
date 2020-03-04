@@ -57,7 +57,7 @@ export default createStore(
     createRootReducer(history),
     composeEnhancers(
         applyMiddleware(
-            epicMiddleware,
+            // epicMiddleware,
             routerMiddleware(history),
            
             // logger,
@@ -67,7 +67,7 @@ export default createStore(
         )
     );
 
-epicMiddleware.run(rootEpic);
+// epicMiddleware.run(rootEpic);
 
 // export default function configureStore(preloadedState){
 //     const store = createStore(
